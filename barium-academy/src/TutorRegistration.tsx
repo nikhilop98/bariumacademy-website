@@ -71,9 +71,9 @@ export default function TutorRegistration() {
           background: "#fff",
           borderRadius: "20px",
           boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-          padding: "3rem 2.5rem",
+          padding: "1.5rem 2rem",
           width: "100%",
-          maxWidth: "720px",
+          maxWidth: "850px",
           transition: "all 0.3s ease",
         }}
       >
@@ -102,7 +102,7 @@ export default function TutorRegistration() {
 
         <form onSubmit={handleSubmit}>
           {/* Input wrapper for uniform spacing */}
-          <div style={{ display: "grid", gap: "1.8rem" }}>
+          <div style={{ display: "grid", gap: "1rem" }}>
             {/* Full Name */}
             <div>
               <label

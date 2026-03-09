@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
@@ -19,6 +20,7 @@ import WhatsNew from "./components/WhatsNew";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Home page */}
         <Route

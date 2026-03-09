@@ -57,7 +57,7 @@ export default function TutorRegistration() {
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div style={{ display: "grid", gap: "1.5rem" }}>
+                    <div style={{ display: "grid", gap: "1rem" }}>
                         {/* Full Name */}
                         <div>
                             <label style={labelStyle}>Full Name</label>
