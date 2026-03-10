@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import logo from "../assets/logo.png";
 
 export default function Header() {
@@ -19,13 +20,13 @@ export default function Header() {
         {/* Nav Links */}
         <nav>
           <ul className={`header-nav ${menuOpen ? "open" : ""}`}>
-            <li><a href="/#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-            <li><a href="/#about" onClick={() => setMenuOpen(false)}>About</a></li>
-            <li><a href="/#courses" onClick={() => setMenuOpen(false)}>Subjects</a></li>
-            <li><a href="/#testimonials" onClick={() => setMenuOpen(false)}>Reviews</a></li>
-            <li><a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a></li>
-            <li><a href="/whats-new" onClick={() => setMenuOpen(false)} className="nav-whatsnew">What's New</a></li>
-            <li><a href="/#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+            <li><Link smooth to="/#home" onClick={() => setMenuOpen(false)}>Home</Link></li>
+            <li><Link smooth to="/#about" onClick={() => setMenuOpen(false)}>About</Link></li>
+            <li><Link smooth to="/#courses" onClick={() => setMenuOpen(false)}>Subjects</Link></li>
+            <li><Link smooth to="/#testimonials" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
+            <li><Link smooth to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
+            <li><Link smooth to="/whats-new" onClick={() => setMenuOpen(false)} className="nav-whatsnew">What's New</Link></li>
+            <li><Link smooth to="/#contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
           </ul>
         </nav>
 
