@@ -17,35 +17,37 @@ export default function Header() {
           <img src={logo} alt="Barium Academy" />
         </div>
 
-        {/* Nav Links */}
-        <nav>
-          <ul className={`header-nav ${menuOpen ? "open" : ""}`}>
-            <li><Link smooth to="/#home" onClick={() => setMenuOpen(false)}>Home</Link></li>
-            <li><Link smooth to="/#about" onClick={() => setMenuOpen(false)}>About</Link></li>
-            <li><Link smooth to="/#courses" onClick={() => setMenuOpen(false)}>Subjects</Link></li>
-            <li><Link smooth to="/#testimonials" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
-            <li><Link smooth to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
-            <li><Link smooth to="/whats-new" onClick={() => setMenuOpen(false)} className="nav-whatsnew">What's New</Link></li>
-            <li><Link smooth to="/#contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-          </ul>
-        </nav>
+        <div className={`mobile-menu-wrapper ${menuOpen ? "open" : ""}`}>
+          {/* Nav Links */}
+          <nav>
+            <ul className="header-nav">
+              <li><Link smooth to="/#home" onClick={() => setMenuOpen(false)}>Home</Link></li>
+              <li><Link smooth to="/#about" onClick={() => setMenuOpen(false)}>About</Link></li>
+              <li><Link smooth to="/#courses" onClick={() => setMenuOpen(false)}>Subjects</Link></li>
+              <li><Link smooth to="/#testimonials" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
+              <li><Link smooth to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
+              <li><Link smooth to="/whats-new" onClick={() => setMenuOpen(false)} className="nav-whatsnew">What's New</Link></li>
+              <li><Link smooth to="/#contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+            </ul>
+          </nav>
 
-        {/* CTA Buttons */}
-        <div className={`header-actions ${menuOpen ? "open" : ""}`}>
-          <button
-            className="btn btn-outline"
-            style={{ padding: "0.55rem 1.25rem", fontSize: "0.9rem" }}
-            onClick={() => { navigate("/registration"); setMenuOpen(false); }}
-          >
-            Book a Demo
-          </button>
-          <button
-            className="btn btn-primary"
-            style={{ padding: "0.55rem 1.25rem", fontSize: "0.9rem" }}
-            onClick={() => { navigate("/tutor-registration"); setMenuOpen(false); }}
-          >
-            Be a Tutor
-          </button>
+          {/* CTA Buttons */}
+          <div className="header-actions">
+            <button
+              className="btn btn-outline"
+              style={{ padding: "0.55rem 1.25rem", fontSize: "0.9rem" }}
+              onClick={() => { navigate("/registration"); setMenuOpen(false); }}
+            >
+              Book a Demo
+            </button>
+            <button
+              className="btn btn-primary"
+              style={{ padding: "0.55rem 1.25rem", fontSize: "0.9rem" }}
+              onClick={() => { navigate("/tutor-registration"); setMenuOpen(false); }}
+            >
+              Be a Tutor
+            </button>
+          </div>
         </div>
 
         {/* Hamburger */}
