@@ -888,7 +888,7 @@ h6 {
   color: var(--accent);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .stats-inner {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -908,6 +908,21 @@ h6 {
 
   .stat-item:nth-child(3) {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none !important;
   }
 }
 
