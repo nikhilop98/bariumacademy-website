@@ -17,11 +17,12 @@ export default function StatsCounter() {
         {stats.map((stat, i) => (
           <div className="stat-item" key={i}>
             <div className={`stat-number ${stat.accent ? "stat-accent" : ""}`}>
-              {inView ? (
-                <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} />
-              ) : (
-                <span>0{stat.suffix}</span>
-              )}
+              <CountUp
+                start={0}
+                end={inView ? stat.value : 0}
+                duration={2.5}
+                suffix={stat.suffix}
+              />
             </div>
             <div className="stat-label">{stat.label}</div>
           </div>
