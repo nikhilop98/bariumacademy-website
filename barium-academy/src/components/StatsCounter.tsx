@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -10,20 +9,15 @@ const stats = [
 ];
 
 export default function StatsCounter() {
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.3 });
-  const [started, setStarted] = useState(false);
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <section
-      className="stats-section"
-      ref={ref}
-      onMouseEnter={() => { setStarted(false); setTimeout(() => setStarted(true), 50); }}
-    >
+    <section className="stats-section" ref={ref}>
       <div className="stats-inner">
         {stats.map((stat, i) => (
           <div className="stat-item" key={i}>
             <div className={`stat-number ${stat.accent ? "stat-accent" : ""}`}>
-              {inView && started ? (
+              {inView ? (
                 <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} />
               ) : (
                 <span>0{stat.suffix}</span>
