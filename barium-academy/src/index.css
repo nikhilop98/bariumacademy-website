@@ -875,6 +875,8 @@ h6 {
   color: var(--white);
   line-height: 1;
   margin-bottom: 0.5rem;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
 }
 
 .stat-label {
