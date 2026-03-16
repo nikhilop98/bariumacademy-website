@@ -37,7 +37,6 @@ export default function RegistrationForm() {
       <div className="registration-inner">
         <div className="registration-header">
           <span className="section-tag">Free Session</span>
-          <h2 className="section-title">Book a Free Demo Session</h2>
           <p className="section-subtitle">
             Experience high-quality tutoring with zero commitment. Book your first session today.
           </p>
