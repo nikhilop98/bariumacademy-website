@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { blogPosts, categories } from "../data/blogData";
 import SEO from "./SEO";
@@ -6,6 +7,11 @@ import Footer from "./Footer";
 
 export default function BlogList() {
     const navigate = useNavigate();
+    const [activeCategory, setActiveCategory] = useState<string>("all");
+
+    const filteredPosts = activeCategory === "all"
+        ? blogPosts
+        : blogPosts.filter((p) => p.category.toLowerCase().replace(/\s+/g, "-") === activeCategory || p.category === activeCategory);
 
     return (
         <>
@@ -33,16 +39,16 @@ export default function BlogList() {
                 <div className="container">
                     <div className="blog-categories">
                         <button
-                            className="blog-cat-btn blog-cat-active"
-                            onClick={() => { }}
+                            className={`blog-cat-btn ${activeCategory === "all" ? "blog-cat-active" : ""}`}
+                            onClick={() => setActiveCategory("all")}
                         >
                             All Posts
                         </button>
                         {categories.map((cat) => (
                             <button
                                 key={cat.slug}
-                                className="blog-cat-btn"
-                                onClick={() => { }}
+                                className={`blog-cat-btn ${activeCategory === cat.slug ? "blog-cat-active" : ""}`}
+                                onClick={() => setActiveCategory(cat.slug)}
                             >
                                 {cat.label}
                             </button>
@@ -54,31 +60,37 @@ export default function BlogList() {
             {/* Posts Grid */}
             <section className="blog-section">
                 <div className="container">
-                    <div className="blog-grid">
-                        {blogPosts.map((post) => (
-                            <article
-                                key={post.slug}
-                                className="blog-card"
-                                onClick={() => navigate(`/blog/${post.slug}`)}
-                            >
-                                <div className="blog-card-img-wrap">
-                                    <img src={post.coverImage} alt={post.title} loading="lazy" />
-                                    <span className="blog-card-category">{post.category}</span>
-                                </div>
-                                <div className="blog-card-body">
-                                    <div className="blog-card-meta">
-                                        <span>📅 {post.date}</span>
-                                        <span>⏱ {post.readTime}</span>
+                    {filteredPosts.length === 0 ? (
+                        <div className="blog-empty">
+                            <p>No posts found in this category yet. Check back soon!</p>
+                        </div>
+                    ) : (
+                        <div className="blog-grid">
+                            {filteredPosts.map((post) => (
+                                <article
+                                    key={post.slug}
+                                    className="blog-card"
+                                    onClick={() => navigate(`/blog/${post.slug}`)}
+                                >
+                                    <div className="blog-card-img-wrap">
+                                        <img src={post.coverImage} alt={post.title} loading="lazy" />
+                                        <span className="blog-card-category">{post.category}</span>
                                     </div>
-                                    <h2 className="blog-card-title">{post.title}</h2>
-                                    <p className="blog-card-excerpt">{post.excerpt}</p>
-                                    <button className="blog-card-link">
-                                        Read Article →
-                                    </button>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
+                                    <div className="blog-card-body">
+                                        <div className="blog-card-meta">
+                                            <span>📅 {post.date}</span>
+                                            <span>⏱ {post.readTime}</span>
+                                        </div>
+                                        <h2 className="blog-card-title">{post.title}</h2>
+                                        <p className="blog-card-excerpt">{post.excerpt}</p>
+                                        <button className="blog-card-link">
+                                            Read Article →
+                                        </button>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 

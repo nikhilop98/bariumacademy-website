@@ -44,6 +44,26 @@ const programs = [
         price: "Starting from ₹6,999/month (1-on-1 sessions)",
         cta: "Join AP Bootcamp →",
     },
+    {
+        id: "gcse-revision-mastery",
+        badge: <span><i className="fa-solid fa-graduation-cap" style={{ marginRight: "6px" }}></i> Grade 9 Targets</span>,
+        title: "GCSE 9-1 Revision Mastery",
+        tagline: "Structured Revision · AQA & Edexcel Boards · Linear Diagnostics",
+        image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=85",
+        color: "linear-gradient(135deg, #00b09b 0%, #96c93d 100%)",
+        highlights: [
+            "Comprehensive 1-on-1 prep tailored strictly for GCSE and IGCSE curriculums",
+            "Aligned perfectly with linear exam board boards (AQA, Edexcel, OCR)",
+            "Frequent diagnostics focusing on examiners checklist breakdown analytics",
+            "Target heavy 6-marker Free Response structures effortlessly",
+            "Includes dedicated past paper drills and active recall summary cards",
+            "Build robust endurance for complete final exam timelines correctly",
+        ],
+        subjects: ["GCSE Maths (Higher/Found)", "Triple / Combined Science", "English Language & Lit", "Computer Science", "Economics", "History"],
+        dates: "March 15 – June 10, 2026",
+        price: "Starting from ₹5,999/month (1-on-1 sessions)",
+        cta: "Start GCSE Prep →",
+    },
 ];
 
 export default function WhatsNew() {
@@ -52,9 +72,9 @@ export default function WhatsNew() {
     return (
         <>
             <SEO
-                title="What's New — Summer Programs & AP Bootcamp"
-                description="Explore Barium Academy's latest offerings: Summer Intensive Programs and AP Exam Bootcamp. Limited spots available for 2026. Reserve your spot today!"
-                keywords="summer tutoring program, AP bootcamp, AP exam prep, summer classes for students, intensive tutoring, barium academy programs"
+                title="What's New — Programs & GCSE Revision Mastery"
+                description="Explore Barium Academy's latest offerings: Summer Intensive Programs, AP Exam Bootcamp, and GCSE Revision Mastery. Limited spots for 2026. Review targets today!"
+                keywords="summer tutoring program, AP bootcamp, GCSE revision classes, AP exam prep, intensive tutoring, barium academy programs"
                 canonical="/whats-new"
             />
             <Header />
@@ -116,13 +136,7 @@ export default function WhatsNew() {
                                             <p>{prog.dates}</p>
                                         </div>
                                     </div>
-                                    <div className="whatsnew-detail">
-                                        <span className="whatsnew-detail-icon"><i className="fa-solid fa-sack-dollar"></i></span>
-                                        <div>
-                                            <strong>Price</strong>
-                                            <p>{prog.price}</p>
-                                        </div>
-                                    </div>
+
                                 </div>
 
                                 <button

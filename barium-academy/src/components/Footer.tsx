@@ -116,11 +116,8 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Barium Academy. All rights reserved.</span>
-        <span>
-          <Link smooth to="/#home">Privacy Policy</Link> &nbsp;·&nbsp;
-          <Link smooth to="/#home">Terms of Service</Link>
-        </span>
+        <span>© 2025 Barium Academy. All rights reserved.</span>
+        <span>Made with ❤️ for students everywhere.</span>
       </div>
     </footer>
   );

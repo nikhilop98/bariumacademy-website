@@ -201,14 +201,7 @@ export default function Testimonials() {
           ))}
         </Slider>
 
-        <div className="testimonials-cta">
-          <a
-            href={`mailto:bariumacademy@gmail.com?subject=My Review for Barium Academy`}
-            className="btn btn-outline"
-          >
-            ✍️ Add Your Review
-          </a>
-        </div>
+
       </div>
     </section>
   );

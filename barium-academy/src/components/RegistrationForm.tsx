@@ -9,14 +9,17 @@ export default function RegistrationForm() {
     Class: "",
     number: "",
     location: "",
+    subject: "",
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus("loading");
     try {
       const resp = await fetch(
         "https://script.google.com/macros/s/AKfycbx9gMulE7gqoA0axCOk_L-PCd4ph0XuUbyqJU8xhkSoDciF3W--gVEtecjVSkA9usFtdw/exec",
@@ -24,11 +27,11 @@ export default function RegistrationForm() {
       );
       const text = await resp.text();
       console.log("Response:", text);
-      alert("Thank you! Your registration has been received.");
-      setFormData({ name: "", email: "", Class: "", number: "", location: "" });
+      setStatus("success");
+      setFormData({ name: "", email: "", Class: "", number: "", location: "", subject: "" });
     } catch (err) {
       console.error("Submit error:", err);
-      alert("Something went wrong. Please try again.");
+      setStatus("error");
     }
   };
 
@@ -37,6 +40,7 @@ export default function RegistrationForm() {
       <div className="registration-inner">
         <div className="registration-header">
           <span className="section-tag">Free Session</span>
+          <h2 className="section-title">Book Your Free Demo</h2>
           <p className="section-subtitle">
             Experience high-quality tutoring with zero commitment. Book your first session today.
           </p>
@@ -44,6 +48,18 @@ export default function RegistrationForm() {
 
         <div className="form-card">
           <form onSubmit={handleSubmit}>
+            {/* Success / Error Banner */}
+            {status === "success" && (
+              <div className="form-feedback form-feedback-success">
+                <i className="fa-solid fa-circle-check"></i> Thank you! Your registration has been received. We\'ll be in touch soon!
+              </div>
+            )}
+            {status === "error" && (
+              <div className="form-feedback form-feedback-error">
+                <i className="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please try again or contact us on WhatsApp.
+              </div>
+            )}
+
             {/* Name */}
             <div className="form-group">
               <label>Your Name</label>
@@ -72,6 +88,32 @@ export default function RegistrationForm() {
               />
             </div>
 
+            {/* Subject of Interest */}
+            <div className="form-group">
+              <label>Subject of Interest</label>
+              <select
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                className="form-input"
+              >
+                <option value="">Select a subject...</option>
+                <option>Mathematics</option>
+                <option>Physics</option>
+                <option>Chemistry</option>
+                <option>Biology</option>
+                <option>English</option>
+                <option>SAT / ACT Prep</option>
+                <option>AP Subjects</option>
+                <option>GCSE Subjects</option>
+                <option>A-Level Subjects</option>
+                <option>Leaving Certificate</option>
+                <option>Programming / Coding</option>
+                <option>Foreign Languages</option>
+                <option>Other</option>
+              </select>
+            </div>
+
             {/* Class */}
             <div className="form-group">
               <label>Class / Grade</label>
@@ -97,8 +139,6 @@ export default function RegistrationForm() {
               />
             </div>
 
-
-
             {/* Location */}
             <div className="form-group">
               <label>Your Location</label>
@@ -113,8 +153,13 @@ export default function RegistrationForm() {
             </div>
 
             {/* Submit */}
-            <button type="submit" className="btn btn-primary btn-lg" style={{ width: "100%" }}>
-              Book My Free Demo →
+            <button
+              type="submit"
+              className="btn btn-primary btn-lg"
+              style={{ width: "100%" }}
+              disabled={status === "loading"}
+            >
+              {status === "loading" ? "Submitting..." : "Book My Free Demo →"}
             </button>
           </form>
         </div>
