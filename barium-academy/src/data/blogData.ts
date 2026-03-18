@@ -317,14 +317,25 @@ export const blogPosts: BlogPost[] = [
         coverImage: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
         content: [
             {
+                heading: "Kinematics: The Big 4 Equations",
+                body: "All AP Physics 1 motion problems can be solved with four kinematic equations. The key is knowing **which variable is missing** and picking the equation that doesn't contain it.\n\nThe four equations are:\n• v = u + at (missing: displacement)\n• s = ut + ½at² (missing: final velocity)\n• v² = u² + 2as (missing: time)\n• s = ½(u + v)t (missing: acceleration)\n\nAlways start kinematics problems by listing: what you know (u, v, a, s, t) and what you need to find. The missing variable tells you which equation to use.",
+            },
+            {
                 heading: "Dynamics: Connecting Forces & Motion",
-                body: "AP Physics multiple-choice questions love forcing you to combine formulas. Static equilibrium requires Net Force = 0 and Net Torque = 0. If there is Net Force, acceleration occurs ($F = ma$). Focus heavily on free-body diagrams (FBDs)—if your diagram is wrong, your math will be wrong.",
+                body: "AP Physics multiple-choice questions love forcing you to combine formulas. Static equilibrium requires Net Force = 0 and Net Torque = 0. If there is Net Force, acceleration occurs (F = ma). Focus heavily on free-body diagrams (FBDs) — if your diagram is wrong, your math will be wrong.\n\nFor inclined plane problems: always resolve forces parallel and perpendicular to the slope, not vertically and horizontally. The component of gravity along the slope is mg·sin(θ).",
             },
             {
                 heading: "Work & Energy: The Conservative Pathway",
-                body: "When you aren't given 'Time' ($t$) but given distance or height, look immediately at Energy. \n\n$\text{Kinetic Energy} = 0.5mv^2$ \n$\text{Potential Energy} = mgh$ \n\nEnergy cannot be created or destroyed, only transferred. In roller-coaster or pendulum problems, set Initial $M.E. = \text{Final } M.E.$ to bypass doing heavy kinematics algebra entirely.",
+                body: "When you aren't given Time (t) but given distance or height, look immediately at Energy.\n\nKinetic Energy = 0.5mv²\nPotential Energy = mgh\n\nEnergy cannot be created or destroyed, only transferred. In roller-coaster or pendulum problems, set Initial M.E. = Final M.E. to bypass doing heavy kinematics algebra entirely.\n\n**The Work-Energy Theorem**: Net Work = Change in KE. This is the bridge between forces and motion without needing kinematics.",
             },
-
+            {
+                heading: "Momentum & Impulse: Collision Questions",
+                body: "Momentum (p = mv) is always conserved in collisions if no external forces act. In AP Physics 1, you'll see two types:\n\n**Elastic collisions**: Both momentum AND kinetic energy are conserved. Objects bounce off each other.\n**Inelastic collisions**: Only momentum is conserved. Objects may stick together (perfectly inelastic).\n\nImpulse-Momentum Theorem: The change in momentum equals the impulse (Force × time). This explains why airbags save lives — they increase the time over which force acts, reducing peak force on the body.",
+            },
+            {
+                heading: "Exam Strategy: How to Attack AP Physics 1 MCQs",
+                body: "The AP Physics 1 exam has 50 MCQs and 5 FRQs. Here's how to approach it:\n\n**MCQ Strategy**: For conceptual questions, eliminate answers that violate fundamental laws (conservation of energy/momentum). Draw a quick sketch for any mechanics problem.\n\n**FRQ Strategy**: Always show your reasoning, even if you get the numerical answer wrong. AP readers award partial credit for correct physics reasoning. Clearly label all variables and include units in every answer.\n\n**Time management**: Spend no more than 1 minute per MCQ. Flag hard ones and return. FRQs need about 12 minutes each.",
+            },
         ],
     },
     {
@@ -344,13 +355,24 @@ export const blogPosts: BlogPost[] = [
         content: [
             {
                 heading: "What are A-Levels?",
-                body: "A-Levels (Advanced Levels) are subject-based qualifications required for university admission in the UK and worldwide. Students typically choice 3 or 4 subjects that they can study with incredible subject depth over two years (Year 12 and Year 13).",
+                body: "A-Levels (Advanced Levels) are subject-based qualifications required for university admission in the UK and worldwide. Students typically choose 3 or 4 subjects to study in extraordinary depth over two years (Year 12 and Year 13). The depth achievable in A-Level study is widely regarded as among the highest in the world for pre-university education.",
             },
             {
                 heading: "AS vs A-Level (The Linear Shift)",
-                body: "Previously, subjects were split modularly: AS levels in Year 1 carried over to A2. \n\n**Modern Linear A-Levels**: AS levels are now standalone qualifications that do not count toward your final A-Level. Your entirely grade is decides by exams sat at the core end of Year 13. This rewards depth and long-term absorption, but increases stress on final exam month.",
+                body: "Previously, subjects were split modularly: AS levels in Year 12 carried marks over to the full A-Level grade.\n\n**Modern Linear A-Levels**: AS levels are now standalone qualifications that do not count toward your final A-Level grade. Your entire grade is determined by exams sat at the end of Year 13. This rewards long-term retention and depth, but places significant pressure on the final exam period.",
             },
-
+            {
+                heading: "How to Choose Your A-Level Subjects",
+                body: "Choosing the right combination of A-Levels is arguably the most important academic decision you'll make at age 16.\n\n**Keep your university pathway open**: If you want to study Medicine, you'll need Chemistry and Biology. Engineering requires Maths and Physics. Research entry requirements for your top 3 university courses before finalising your A-Level choices.\n\n**Facilitating Subjects**: Russell Group universities (Oxford, Cambridge, LSE, Imperial) list 'facilitating subjects' that keep the widest range of options open: Maths, Further Maths, English Literature, History, Geography, Languages, Biology, Chemistry, Physics.\n\n**Don't choose based on what your friends are doing**: Choose subjects you'll be spending 2 years studying intensively — personal interest and aptitude matter enormously.",
+            },
+            {
+                heading: "UCAS Points and University Offers",
+                body: "UK universities make offers in two ways:\n\n**Grade offers**: The most common. For example, 'AAB' means the university expects you to achieve A, A, and B in your three A-Levels.\n\n**UCAS tariff points**: A numeric system where A* = 56 points, A = 48, B = 40, C = 32. Some universities make tariff-point offers like '120 UCAS points from 3 A-Levels.'\n\nOxford, Cambridge, and most Russell Group universities use grade offers, often with subject-specific requirements (e.g., 'A in Maths' for an Engineering course).",
+            },
+            {
+                heading: "Common A-Level Mistakes to Avoid",
+                body: "• **Underestimating Year 12**: Students often treat Year 12 as preparation and Year 13 as the 'real year.' But under the linear system, all content from both years appears in Year 13 exams. Start past paper practice in Year 12.\n\n• **Not using mark schemes**: The mark scheme is your ultimate revision tool for A-Levels. It tells you exactly what examiners are looking for, word-for-word.\n\n• **Leaving personal statements too late**: UCAS applications open in September of Year 13. Your Personal Statement needs to be excellent, and that takes months of drafting — start in June of Year 12.",
+            },
         ],
     },
     {
@@ -369,10 +391,25 @@ export const blogPosts: BlogPost[] = [
         coverImage: "https://images.unsplash.com/photo-1530213786676-6cbb6220f4ab?auto=format&fit=crop&w=1200&q=80",
         content: [
             {
-                heading: "The secret to 6-Marker answers",
-                body: "Long Free Response questions require structure. Use bullet points or ordered steps if describing a continuous process (like mitosis or photosynthesis). Ensure you hit high-weight keywords like 'enzyme active site,' 'complementary fit,' and 'denature.' Examiners use checklist grading, if you mention the correct keywords with accurate sequence context, you score top marks without long-drawn essays.",
+                heading: "The Secret to 6-Marker Answers",
+                body: "Long Free Response questions require structure. Use bullet points or ordered steps if describing a continuous process (like mitosis or photosynthesis). Ensure you hit high-weight keywords like 'enzyme active site,' 'complementary fit,' and 'denature.' Examiners use checklist grading — if you mention the correct keywords with accurate sequence context, you score top marks without long-drawn essays.",
             },
-
+            {
+                heading: "Mastering Required Practicals",
+                body: "GCSE Biology has 8 required practicals that can appear directly in your exam with data, graphs, or method questions. For each practical, you must know:\n\n• The independent variable (what you change)\n• The dependent variable (what you measure)\n• The control variables (what you keep the same)\n• Potential sources of error and how to reduce them\n\nPracticals like the osmosis in potato cylinders experiment, microscopy, and enzyme activity investigations appear repeatedly. Treat these as predictable marks you can bank.",
+            },
+            {
+                heading: "How to Read Graphs Under Exam Pressure",
+                body: "Many GCSE Biology marks are lost on graph analysis — not because students don't understand the biology, but because they misread what the question is asking.\n\nFollow this 3-step process:\n\n**Step 1 — Read the axes carefully**: Always check both axes, their units, and the scale before doing anything else.\n**Step 2 — Identify the trend**: Is it increasing, decreasing, or showing a rate change? Use exact data points from the graph in your answer.\n**Step 3 — Apply the biology**: Connect the graph trend to a biological mechanism (e.g., 'the plateau occurs because all enzyme active sites are saturated').",
+            },
+            {
+                heading: "Command Words: The Key to Answering What Examiners Actually Ask",
+                body: "One of the most frequent mistakes in GCSE Biology is misreading command words. Here's what each means:\n\n• **State / Name / Give** — One-word or one-line factual answer. No explanation needed.\n• **Describe** — Say what you see in data or a trend. Never explain why here.\n• **Explain** — Give the biological mechanism behind something. This is where keywords matter.\n• **Evaluate** — Weigh up evidence for and against, then give a conclusion.\n• **Compare** — Similarity AND difference required. If you only give one, you lose marks.",
+            },
+            {
+                heading: "Building a Smart Revision Plan for Biology",
+                body: "Biology has a huge factual load across three separate sciences (if Triple). Structure your revision around topic clusters, not random cramming:\n\nWeeks 1–3: Cell Biology, Organisation, Infection & Response\nWeeks 4–6: Bioenergetics, Homeostasis, Inheritance & Variation\nWeeks 7–8: Ecology + Required Practicals revision\nFinal Week: Past papers only, timed under exam conditions\n\nUse active recall with flashcards — don't just re-read notes. Cover the key term and try to write a definition before checking. Research consistently shows active recall improves retention by 50% over passive re-reading.",
+            },
         ],
     },
     {
@@ -392,9 +429,24 @@ export const blogPosts: BlogPost[] = [
         content: [
             {
                 heading: "Extract Analysis: The 3-Step Method",
-                body: "To score a top grade (8-9) in explicit reading, you cannot just list metaphors. \n\n**Tip 1: Connect to core themes**: Why did the author use that word? (e.g., 'to symbolize entrapment'). \n\n**Tip 2: Focus on Structure**: Does the extract pan from wide to narrow? Is there a turning point? Examiners love structural comments above simple linguistic items.",
+                body: "To score a top grade (8–9) in explicit reading, you cannot just list metaphors.\n\n**Tip 1: Connect to core themes**: Why did the author use that word? (e.g., 'to symbolize entrapment').\n**Tip 2: Focus on Structure**: Does the extract pan from wide to narrow? Is there a turning point? Examiners love structural comments above simple linguistic items.",
             },
-
+            {
+                heading: "The AQA Reading Framework (Q1–Q4)",
+                body: "AQA English Language Paper 1 follows a predictable structure:\n\n**Q1 (4 marks)**: List 4 explicit facts from lines 1–5. No inference — literal reading only.\n**Q2 (8 marks)**: Language analysis. Use vocabulary (word choices), figurative language (simile, metaphor), and sentence structure in your answer.\n**Q3 (8 marks)**: Structural analysis. Comment on the whole text — openings, endings, shifts in focus, and how the writer builds tension.\n**Q4 (20 marks)**: Evaluation — do you agree with a given statement about the text? Use 4–5 developed points with textual evidence.",
+            },
+            {
+                heading: "Creative Writing (Section B): What Gets You Grade 9",
+                body: "Your creative writing is marked on: Communication & Organisation (24 marks) and Technical Accuracy (16 marks).\n\nGrade 9 writing is distinguished by:\n• A clear and sustained narrative voice throughout\n• Deliberate structural choices (non-linear time, shifts in perspective, circular endings)\n• Sophisticated vocabulary used precisely, not randomly\n• Controlled sentence variety — mix of long complex and punchy short sentences for rhythm\n• Very few spelling or punctuation errors\n\nTip: Don't try to write the most dramatic story. Write a focused, well-crafted piece. Examiners reward control over ambition.",
+            },
+            {
+                heading: "The Golden Rule: Always Embed Your Evidence",
+                body: "The most common reason students drop from Grade 7 to Grade 5 on analysis questions is **not embedding their quotations**. Compare these two responses:\n\n**Weak**: The writer uses the word 'crumbling.' This suggests the building is old.\n\n**Strong**: The writer's choice of 'crumbling' evokes a sense of inevitable decay, suggesting that not only the building but the character's last hope is disintegrating.\n\nThe strong response embeds the evidence naturally, uses sophisticated vocabulary ('inevitable decay', 'disintegrating'), makes an inference, and links to a wider theme. This is what A02 marks reward.",
+            },
+            {
+                heading: "Building Your Revision Plan for English Language",
+                body: "Unlike Science or Maths, you can't simply memorise English Language content. You need to practise skills.\n\nWeeks 1–2: Read 2–3 unseen extracts per week, practise writing Q2-style language analysis responses.\nWeeks 3–4: Full Paper 1 Section A (reading) timed practice. Get feedback on where marks are dropped.\nWeeks 5–6: Creative writing — write one piece per week, then compare against mark scheme descriptors.\nFinal 2 Weeks: Mixed past papers under timed conditions.\n\nRemember, reading widely — novels, newspapers, short fiction — directly improves your own writing quality over time.",
+            },
         ],
     },
     {
@@ -413,10 +465,25 @@ export const blogPosts: BlogPost[] = [
         coverImage: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
         content: [
             {
-                heading: "Submitting vs Hiding Your Score",
-                body: "A score is always an ASSET if it meets or exceeds the school's median (50th percentile) listed score for the previous year's class. \n\nIf the school range is 1420-1550, and you score a 1500, **submit it**. It serves as hard quantitative proof of academic preparedness alongside your GPA.",
+                heading: "What 'Test-Optional' Actually Means",
+                body: "'Test-optional' means a college will not disadvantage you for not submitting SAT/ACT scores. It does NOT mean scores are irrelevant or unwanted. Many admissions officers still use scores as a way to contextualize GPA — especially when comparing students from thousands of different school systems.\n\nThe policy gained widespread adoption during COVID-19 (2020-2022) and many schools kept it permanently. But data from multiple studies consistently shows that applicants who submit strong test scores have higher acceptance rates at test-optional schools than those who don't.",
             },
-
+            {
+                heading: "When to Submit Your Score",
+                body: "A score is always an **asset** if it meets or exceeds the school's median (50th percentile) listed score for the previous year's class.\n\nIf the school's middle 50% SAT range is 1420–1550, and you score a 1500, **submit it**. It serves as hard quantitative proof of academic preparedness alongside your GPA.\n\n**Simple rule**: Submit if your score is at or above the school's 50th percentile. Withhold if your score falls below the 25th percentile. The middle range is judgment-dependent — consider your GPA strength.",
+            },
+            {
+                heading: "When NOT to Submit Your Score",
+                body: "If your SAT score falls significantly below the school's typical range, submitting it can actively hurt your application by raising a red flag. Admissions officers note the absence or presence of a score — but they won't penalize you for not submitting at a test-optional school.\n\nFor example: If Harvard's middle 50% is 1510–1580 and you scored 1380, **don't submit**. Let your essays, extracurriculars, recommendations, and GPA tell your story instead.\n\nFor highly selective schools (acceptance rate <15%), only submit if your score is comfortably in the top 50% of admitted students.",
+            },
+            {
+                heading: "The Role of GPA in a Test-Optional World",
+                body: "When scores are absent, GPA and course rigor become even more important. Colleges look at:\n\n• Your unweighted and weighted GPA trend over 4 years\n• The difficulty of courses taken (AP, IB, dual enrollment)\n• Your class rank (if your school reports it)\n• Grade trends — did you improve from 9th to 12th grade?\n\nA student with a 3.9 GPA taking 6 AP courses and no SAT score is a stronger candidate than a student with a 3.4 GPA, 2 AP courses, and a 1450 SAT. In the test-optional era, course rigor and genuine intellectual curiosity matter more than ever.",
+            },
+            {
+                heading: "Conclusion: Should You Still Prep for the SAT?",
+                body: "Absolutely — yes. Even at test-optional schools, a strong SAT score (1450+) is still a differentiating factor that can tip a borderline application. And many merit scholarship programs still require standardized test scores, regardless of admissions policy.\n\nOur recommendation: Take the SAT at least once in your junior year. If you score above the school's 50th percentile, submit it everywhere. If not, you've lost nothing by having tried — and you can still choose not to submit.\n\nBarium Academy's SAT tutors specialize in building score improvements of 150+ points in 3 months. Book a free demo and let's build your plan.",
+            },
         ],
     },
     {
@@ -435,10 +502,25 @@ export const blogPosts: BlogPost[] = [
         coverImage: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
         content: [
             {
-                heading: "The Differentiating Factor for 'y' Variables",
-                body: "When terms contain both $x$ and $y$ (e.g. $x^2 + y^2 = 25$), you treat $y$ as a function of $x$. \n\nDifferentiating $y^2$ requires the Chain Rule: $\frac{d}{dx}(y^2) = 2y \cdot \frac{dy}{dx}$. \n\nAlways ensure you include factorising steps at the end to isolate $\frac{dy}{dx}$ on one side of the equals bound.",
+                heading: "What Is Implicit Differentiation?",
+                body: "Explicit functions have y isolated on one side, like y = x² + 3x. Implicit functions mix x and y together, like x² + y² = 25 (a circle) or x³ + y³ = 6xy.\n\nYou cannot easily rearrange these to isolate y, so instead you differentiate both sides of the equation with respect to x — and whenever you differentiate a y term, you apply the Chain Rule and multiply by dy/dx.\n\nThis technique appears in every A-Level Maths paper and is worth significant marks on the harder differentiation questions.",
             },
-
+            {
+                heading: "The Core Technique: Differentiating 'y' Variables",
+                body: "When terms contain both x and y (e.g. x² + y² = 25), you treat y as a function of x.\n\nDifferentiating y² requires the Chain Rule: d/dx(y²) = 2y · dy/dx\n\nStep-by-step for x² + y² = 25:\n1. Differentiate both sides w.r.t. x: 2x + 2y(dy/dx) = 0\n2. Rearrange: 2y(dy/dx) = -2x\n3. Divide: dy/dx = -x/y\n\nAlways ensure you include the factorising steps at the end to isolate dy/dx on one side.",
+            },
+            {
+                heading: "Implicit Differentiation with the Product Rule",
+                body: "When you have a product of x and y terms (like 3xy or x²y), you need both the Product Rule AND implicit differentiation together.\n\nFor d/dx(3xy):\n• Let u = 3x and v = y\n• Product Rule: d/dx(uv) = u(dv/dx) + v(du/dx)\n• = 3x(dy/dx) + y(3) = 3x(dy/dx) + 3y\n\nThis combined technique is tested heavily in Edexcel and AQA Year 2 Maths papers. Practice recognising when you need both rules simultaneously.",
+            },
+            {
+                heading: "Finding the Equation of the Tangent/Normal",
+                body: "A common exam question type: find the equation of the tangent or normal to an implicitly defined curve at a given point.\n\nMethod:\n1. Use implicit differentiation to find dy/dx\n2. Substitute the given point (x₁, y₁) to get the gradient m\n3. For the tangent: y - y₁ = m(x - x₁)\n4. For the normal: gradient = -1/m, then use the same line equation\n\n**Exam tip**: Always verify the given point lies on the curve by substituting into the original equation before doing anything else. If it doesn't satisfy the equation, you've been given incorrect values or misread the question.",
+            },
+            {
+                heading: "Exam Tips & Common Mistakes",
+                body: "The most common mistakes in implicit differentiation questions:\n\n• **Forgetting to write dy/dx**: When differentiating y², students write 2y but forget the · dy/dx factor. This is the most common error.\n• **Not collecting dy/dx terms**: After differentiating, some students forget there can be multiple dy/dx terms that need collecting and factorising.\n• **Missing product rule terms**: When differentiating xy, students often only differentiate one factor.\n\n**Exam strategy**: In the mark scheme, 'differentiate implicitly' typically earns marks just for attempting the process correctly — even if your algebra goes wrong later. So always attempt these questions fully.",
+            },
         ],
     },
     {
@@ -458,19 +540,27 @@ export const blogPosts: BlogPost[] = [
         content: [
             {
                 heading: "Immersion over Translation",
-                body: "To speak like a native, stop translating word-for-word in your head. Consume target media (movies, podcasts, radio items) without subtitles continuously for 20 minutes daily. This forces your brain to connect sounds directly to meanings rather than using your native language as an intermediate bridge.",
+                body: "To speak like a native, stop translating word-for-word in your head. Consume target media (movies, podcasts, radio) without subtitles for 20 minutes daily. This forces your brain to connect sounds directly to meanings rather than using your native language as an intermediate bridge.\n\nStart with material slightly above your level — the comprehensible input method. Understand 80% of what you hear, and your brain will absorb the remaining 20% through context.",
             },
             {
-                heading: "1. The 80/20 Rule: High-Frequency Vocab",
-                body: "You don’t need 10,000 words to be conversational. In most languages, the top 500 words cover 80% of all daily speech. Focus heavily on absolute high-frequency verbs, pronouns, and connector words (e.g. because, but, although) to build sentences instantly.",
+                heading: "1. The 80/20 Rule: High-Frequency Vocabulary",
+                body: "You don't need 10,000 words to be conversational. In most languages, the top 500 words cover 80% of all daily speech. Focus heavily on high-frequency verbs, pronouns, and connector words (because, but, although, however) to build sentences instantly.\n\nFor reference: Duolingo uses ~2,000 words. To read a novel comfortably, you need ~8,000. But for everyday conversation? 500 core words plus good grammar will carry you 90% of the way in your first year.",
             },
             {
                 heading: "2. Output over Passive Reading",
-                body: "Reading books or doing drills is 'passive input.' To trigger memory retention, you must produce speech. Read sentences aloud, record yourself speaking, or practice with a native speaker tutor. Speaking forces your brain to recall and assemble structures under live limits.",
+                body: "Reading books or doing grammar drills is 'passive input.' To trigger genuine memory retention, you must produce speech yourself.\n\nRead sentences aloud. Record yourself speaking and listen back. Practise with a native speaker tutor at least once per week. Speaking forces your brain to recall and assemble grammar structures under real-time pressure — which is where fluency is actually built.\n\n**The output gap**: Most language learners spend 90% of their time on input and almost no time on output. Flip this — aim for 50% speaking and response practice.",
             },
             {
                 heading: "3. Spaced Repetition (SRS)",
-                body: "Use flashcard systems (like Anki) to space out vocabulary reviews over specific exponential time increments (1 day, 4 days, 7 days). This prevents 'cramming forgetting curve' and pushes items into long-term nodes.",
+                body: "Use flashcard systems (like Anki) to space out vocabulary reviews over increasing time intervals: 1 day → 4 days → 7 days → 14 days → 30 days. This follows the natural forgetting curve and pushes vocabulary into long-term memory efficiently.\n\n**Anki tip**: Don't just review words — review whole sentences. Seeing 'merci' in isolation teaches you the word. Seeing it in 'Merci beaucoup pour votre aide' teaches you word order, register, and pronunciation context simultaneously.",
+            },
+            {
+                heading: "4. Grammar as a Framework, Not a Prison",
+                body: "Many learners get stuck in 'grammar study paralysis' — endlessly learning rules without ever speaking. A better approach:\n\nLearn the minimum grammar needed to express a present/past/future action, then start speaking immediately. Fix grammar mistakes through feedback (from a tutor or language exchange partner) as they appear in conversation.\n\nLanguages like Spanish and French reward learners who make fluent, confident errors over those who speak slowly and perfectly. Native speakers will always help — don't fear making mistakes.",
+            },
+            {
+                heading: "Conclusion: Your 90-Day Fluency Roadmap",
+                body: "Days 1–30: Master 500 high-frequency words using Anki SRS. Learn present tense conjugation for 20 core verbs. Start consuming 20 minutes of target language media daily.\n\nDays 31–60: Introduce past and future tenses. Begin weekly speaking practice with a tutor or language partner. Start journaling 3 sentences per day in the target language.\n\nDays 61–90: Focus on conversation practice. Watch movies/series without subtitles. Aim for 15-minute conversations without stopping.\n\nAt Barium Academy, our native-speaker language tutors specialise in rapid conversational fluency for French, Spanish, German, Dutch, and more. Book a free demo and start speaking today!",
             },
         ],
     },

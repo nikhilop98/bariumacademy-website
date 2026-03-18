@@ -95,6 +95,7 @@ export default function RegistrationForm() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
+                required
                 className="form-input"
               >
                 <option value="">Select a subject...</option>

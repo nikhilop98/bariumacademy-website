@@ -26,7 +26,7 @@ const programs = [
     },
     {
         id: "ap-bootcamp",
-        badge: <span><i className="fa-solid fa-rocket" style={{ marginRight: "6px" }}></i> New for 2026</span>,
+        badge: <span><i className="fa-solid fa-rocket" style={{ marginRight: "6px" }}></i> Now Enrolling</span>,
         title: "AP Exam Bootcamp",
         tagline: "March – May · Score 4–5 Guaranteed Strategy · All AP Subjects",
         image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=85",
@@ -136,7 +136,13 @@ export default function WhatsNew() {
                                             <p>{prog.dates}</p>
                                         </div>
                                     </div>
-
+                                    <div className="whatsnew-detail">
+                                        <span className="whatsnew-detail-icon"><i className="fa-solid fa-tag"></i></span>
+                                        <div>
+                                            <strong>Pricing</strong>
+                                            <p>{prog.price}</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <button

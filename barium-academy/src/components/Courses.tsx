@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import foreignLanguagesCurric from "../assets/foreign_languages_curriculum.png";
 import usCurric from "../assets/us_curriculum.png";
 import ukCurric from "../assets/uk_curriculum.png";
@@ -206,6 +207,7 @@ const curricula: Curriculum[] = [
 
 export default function Courses() {
   const [selected, setSelected] = useState<Curriculum | null>(null);
+  const navigate = useNavigate();
 
   return (
     <section id="courses" className="courses-section section">
@@ -348,13 +350,12 @@ export default function Courses() {
 
               {/* CTA */}
               <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
-                <a
-                  href="/registration"
+                <button
                   className="btn btn-primary btn-lg"
-                  onClick={() => setSelected(null)}
+                  onClick={() => { setSelected(null); navigate("/registration"); }}
                 >
                   <i className="fa-regular fa-calendar-check" style={{ marginRight: "6px" }}></i> Book a Free Demo for {selected.name}
-                </a>
+                </button>
               </div>
             </div>
           </div>

@@ -116,7 +116,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <span>© 2025 Barium Academy. All rights reserved.</span>
+        <span>© 2026 Barium Academy. All rights reserved.</span>
         <span>Made with ❤️ for students everywhere.</span>
       </div>
     </footer>

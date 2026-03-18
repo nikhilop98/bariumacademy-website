@@ -11,7 +11,7 @@ export default function BlogList() {
 
     const filteredPosts = activeCategory === "all"
         ? blogPosts
-        : blogPosts.filter((p) => p.category.toLowerCase().replace(/\s+/g, "-") === activeCategory || p.category === activeCategory);
+        : blogPosts.filter((p) => p.categorySlug === activeCategory);
 
     return (
         <>

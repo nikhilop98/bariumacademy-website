@@ -11,6 +11,7 @@ export default function TutorRegistration() {
         description: "",
         cvLink: "",
     });
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,6 +19,7 @@ export default function TutorRegistration() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setStatus("loading");
         try {
             const resp = await fetch(
                 "https://script.google.com/macros/s/AKfycbzknubxzkO44TxZiyjTy4pDvz-yVrFAEKQCsAD5-2Q1Mx7kYarZtvmX9egWXkzPA7vKNQ/exec",
@@ -25,7 +27,7 @@ export default function TutorRegistration() {
             );
             const text = await resp.text();
             console.log("Response:", text);
-            alert("Thank you! Your registration has been received.");
+            setStatus("success");
             setFormData({
                 name: "",
                 email: "",
@@ -36,7 +38,7 @@ export default function TutorRegistration() {
             });
         } catch (err) {
             console.error("Submit error:", err);
-            alert("Something went wrong. Please try again.");
+            setStatus("error");
         }
     };
 
@@ -57,6 +59,17 @@ export default function TutorRegistration() {
                 </div>
 
                 <form onSubmit={handleSubmit}>
+                    {/* Success / Error Banner */}
+                    {status === "success" && (
+                        <div className="form-feedback form-feedback-success">
+                            <i className="fa-solid fa-circle-check"></i> Thank you! Your application has been received. We'll be in touch soon!
+                        </div>
+                    )}
+                    {status === "error" && (
+                        <div className="form-feedback form-feedback-error">
+                            <i className="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please try again or contact us on WhatsApp.
+                        </div>
+                    )}
                     <div style={{ display: "grid", gap: "1rem" }}>
                         {/* Full Name */}
                         <div>
@@ -151,8 +164,9 @@ export default function TutorRegistration() {
                         type="submit"
                         className="btn btn-primary btn-lg"
                         style={{ width: "100%", marginTop: "2rem" }}
+                        disabled={status === "loading"}
                     >
-                        Submit Application →
+                        {status === "loading" ? "Submitting..." : "Submit Application →"}
                     </button>
                 </form>
             </div>

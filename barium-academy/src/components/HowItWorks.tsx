@@ -9,9 +9,9 @@ const steps = [
     },
     {
         number: "2",
-        icon: <i className="fa-solid fa-magnifying-glass"></i>,
-        title: "Find Your Tutor",
-        desc: "Browse our handpicked tutors and select the one that's the right fit for you.",
+        icon: <i className="fa-solid fa-user-check"></i>,
+        title: "Get Matched",
+        desc: "We pair you with the perfect expert tutor based on your subject, level, and schedule.",
     },
     {
         number: "3",
