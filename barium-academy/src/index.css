@@ -1667,7 +1667,12 @@ h6 {
 
 @media (max-width: 560px) {
   .footer-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-inner > div:first-child,
+  .footer-inner > div:last-child {
+    grid-column: span 2;
   }
 
   .footer-bottom {
