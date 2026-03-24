@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import logo from "../assets/logo.png";
 
 
@@ -58,12 +59,13 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/#home">Home</a></li>
-            <li><a href="/#about">About Us</a></li>
-            <li><a href="/#courses">Curricula</a></li>
-            <li><a href="/#testimonials">Reviews</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/registration">Book a Demo</a></li>
+            <li><Link smooth to="/#home">Home</Link></li>
+            <li><Link smooth to="/#about">About Us</Link></li>
+            <li><Link smooth to="/#courses">Curricula</Link></li>
+            <li><Link smooth to="/#testimonials">Reviews</Link></li>
+            <li><Link smooth to="/blog">Blog</Link></li>
+            <li><Link smooth to="/registration">Book a Demo</Link></li>
+            <li><Link smooth to="/revision-notes" style={{ color: "var(--primary)", fontWeight: "bold" }}>Free Revision Notes</Link></li>
           </ul>
         </div>
 
@@ -71,12 +73,12 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Curricula</h4>
           <ul>
-            <li><a href="/#courses">US Curriculum</a></li>
-            <li><a href="/#courses">UK Curriculum</a></li>
-            <li><a href="/#courses">Irish Curriculum</a></li>
-            <li><a href="/#courses">Indian Curriculum</a></li>
-            <li><a href="/#courses">Programming</a></li>
-            <li><a href="/#courses">Foreign Languages</a></li>
+            <li><Link smooth to="/#courses">US Curriculum</Link></li>
+            <li><Link smooth to="/#courses">UK Curriculum</Link></li>
+            <li><Link smooth to="/#courses">Irish Curriculum</Link></li>
+            <li><Link smooth to="/#courses">Indian Curriculum</Link></li>
+            <li><Link smooth to="/#courses">Programming</Link></li>
+            <li><Link smooth to="/#courses">Foreign Languages</Link></li>
           </ul>
         </div>
 
@@ -115,11 +117,8 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Barium Academy. All rights reserved.</span>
-        <span>
-          <a href="/#home">Privacy Policy</a> &nbsp;·&nbsp;
-          <a href="/#home">Terms of Service</a>
-        </span>
+        <span>© 2022 Barium Academy. All rights reserved.</span>
+        <span>Made with ❤️ for students everywhere.</span>
       </div>
     </footer>
   );

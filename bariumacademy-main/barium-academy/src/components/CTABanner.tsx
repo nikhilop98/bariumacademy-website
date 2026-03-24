@@ -21,6 +21,12 @@ export default function CTABanner() {
                     </button>
                     <button
                         className="btn btn-outline-white btn-lg"
+                        onClick={() => window.open("https://wa.me/917306096664", "_blank")}
+                    >
+                        <i className="fa-brands fa-whatsapp" style={{ fontSize: "1.2rem" }}></i> Chat on WhatsApp
+                    </button>
+                    <button
+                        className="btn btn-outline-white btn-lg"
                         onClick={() => navigate("/tutor-registration")}
                     >
                         Become a Tutor →

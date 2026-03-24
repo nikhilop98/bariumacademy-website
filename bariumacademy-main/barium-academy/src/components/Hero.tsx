@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import onlineTutoringHero from "../assets/online_tutoring_hero.png";
 
 const avatars = [
   "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&h=80&fit=crop&auto=format&q=80",
@@ -24,7 +25,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-subtitle">
-            Connect with expert tutors for one-on-one personalised lessons or join our team of elite educators.
+            Connect with expert tutors for one-on-one personalised lessons.
           </p>
 
           <div className="hero-actions">
@@ -59,8 +60,8 @@ export default function Hero() {
         {/* Right: Image */}
         <div className="hero-image-wrap">
           <img
-            src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=900&q=90"
-            alt="Student learning online with a tutor"
+            src={onlineTutoringHero}
+            alt="Student learning online with a online tutor attending"
             loading="eager"
           />
 

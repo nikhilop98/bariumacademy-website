@@ -10,6 +10,26 @@ export default function BlogPost() {
 
     const post = blogPosts.find((p) => p.slug === slug);
 
+    // Render body text: parse **bold** → <strong>, \n\n → paragraph breaks
+    const renderBody = (text: string) => {
+        return text.split("\n\n").map((para, pIdx) => {
+            // Split on **bold** markers
+            const parts = para.split(/(\*\*[^*]+\*\*)/g);
+            return (
+                <p key={pIdx} className="blog-para">
+                    {parts.map((part, i) => {
+                        if (part.startsWith("**") && part.endsWith("**")) {
+                            return <strong key={i}>{part.slice(2, -2)}</strong>;
+                        }
+                        return part;
+                    })}
+                </p>
+            );
+        });
+    };
+
+
+
     if (!post) {
         return (
             <>
@@ -85,11 +105,7 @@ export default function BlogPost() {
                             {section.heading && (
                                 <h2 className="blog-section-heading">{section.heading}</h2>
                             )}
-                            {section.body.split("\n\n").map((para, pIdx) => (
-                                <p key={pIdx} className="blog-para">
-                                    {para}
-                                </p>
-                            ))}
+                            {renderBody(section.body)}
                         </div>
                     ))}
 

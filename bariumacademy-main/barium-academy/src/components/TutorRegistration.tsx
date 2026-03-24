@@ -11,6 +11,7 @@ export default function TutorRegistration() {
         description: "",
         cvLink: "",
     });
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,14 +19,23 @@ export default function TutorRegistration() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setStatus("loading");
         try {
-            const resp = await fetch(
-                "https://script.google.com/macros/s/AKfycbzknubxzkO44TxZiyjTy4pDvz-yVrFAEKQCsAD5-2Q1Mx7kYarZtvmX9egWXkzPA7vKNQ/exec",
-                { method: "POST", body: JSON.stringify(formData) }
+            const formPayload = new FormData();
+            Object.keys(formData).forEach((key) => {
+                formPayload.append(key, formData[key as keyof typeof formData]);
+            });
+
+            await fetch(
+                "https://script.google.com/macros/s/AKfycbz_Il53G-frGT21xGOwezuB6Gw1Kj3S_Z9AA6KJywarHN0zuU7HjluKMmtbvNw_soJquA/exec",
+                {
+                    method: "POST",
+                    body: formPayload,
+                    mode: "no-cors",
+                }
             );
-            const text = await resp.text();
-            console.log("Response:", text);
-            alert("Thank you! Your registration has been received.");
+            
+            setStatus("success");
             setFormData({
                 name: "",
                 email: "",
@@ -36,7 +46,7 @@ export default function TutorRegistration() {
             });
         } catch (err) {
             console.error("Submit error:", err);
-            alert("Something went wrong. Please try again.");
+            setStatus("error");
         }
     };
 
@@ -57,7 +67,18 @@ export default function TutorRegistration() {
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div style={{ display: "grid", gap: "1.5rem" }}>
+                    {/* Success / Error Banner */}
+                    {status === "success" && (
+                        <div className="form-feedback form-feedback-success">
+                            <i className="fa-solid fa-circle-check"></i> Thank you! Your application has been received. We'll be in touch soon!
+                        </div>
+                    )}
+                    {status === "error" && (
+                        <div className="form-feedback form-feedback-error">
+                            <i className="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please try again or contact us on WhatsApp.
+                        </div>
+                    )}
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.2rem", marginBottom: "1.2rem" }}>
                         {/* Full Name */}
                         <div>
                             <label style={labelStyle}>Full Name</label>
@@ -109,16 +130,16 @@ export default function TutorRegistration() {
                                 onChange={(value) => setFormData({ ...formData, phone: value })}
                                 inputStyle={{
                                     width: "100%",
-                                    height: "50px",
-                                    borderRadius: "12px",
+                                    height: "46px",
+                                    borderRadius: "10px",
                                     border: "1.5px solid #d4dae3",
-                                    fontSize: "1rem",
+                                    fontSize: "0.95rem",
                                 }}
                             />
                         </div>
+                    </div>
 
-
-
+                    <div style={{ display: "grid", gap: "1.2rem" }}>
                         {/* CV Link */}
                         <div>
                             <label style={labelStyle}>CV (Google Drive Link)</label>
@@ -141,7 +162,7 @@ export default function TutorRegistration() {
                                 value={formData.description}
                                 onChange={handleChange}
                                 className="modern-input"
-                                style={{ height: "110px", resize: "none" }}
+                                style={{ height: "110px", resize: "vertical" }}
                             />
                         </div>
                     </div>
@@ -151,8 +172,9 @@ export default function TutorRegistration() {
                         type="submit"
                         className="btn btn-primary btn-lg"
                         style={{ width: "100%", marginTop: "2rem" }}
+                        disabled={status === "loading"}
                     >
-                        Submit Application →
+                        {status === "loading" ? "Submitting..." : "Submit Application →"}
                     </button>
                 </form>
             </div>

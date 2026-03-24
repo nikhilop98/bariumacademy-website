@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
@@ -15,10 +16,14 @@ import SEO from "./components/SEO";
 import BlogList from "./components/BlogList";
 import BlogPost from "./components/BlogPost";
 import WhatsNew from "./components/WhatsNew";
+import CurriculumDetails from "./components/CurriculumDetails";
+import RevisionNotes from "./components/RevisionNotes";
+import WhatsNewForm from "./components/WhatsNewForm";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/bariumacademy/">
+      <ScrollToTop />
       <Routes>
         {/* Home page */}
         <Route
@@ -41,6 +46,38 @@ function App() {
               <Testimonials />
               <RegistrationForm />
               <CTABanner />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Curriculum Details page */}
+        <Route
+          path="/curriculum/:id"
+          element={
+            <>
+              <Header />
+              <CurriculumDetails />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route path="/whats-new-registration" element={<WhatsNewForm />} />
+
+        {/* Revision Notes page */}
+        <Route
+          path="/revision-notes"
+          element={
+            <>
+              <SEO
+                title="Premium Revision Notes & Cheat Sheets"
+                description="Download our expert-crafted revision guides and examiner checklists specifically aligned to top UK and US grading rubrics."
+                keywords="revision notes, SAT cheat sheet, AP study guide, GCSE notes, A-Level revision"
+                canonical="/revision-notes"
+              />
+              <Header />
+              <RevisionNotes />
               <Footer />
             </>
           }

@@ -3,21 +3,27 @@
 const steps = [
     {
         number: "1",
-        icon: <i className="fa-solid fa-bullseye"></i>,
-        title: "Share Your Goals",
-        desc: "Tell us what subject you need help with, your level, and your availability.",
+        icon: <i className="fa-solid fa-laptop-file"></i>,
+        title: "Free Diagnostic Trial",
+        desc: "Start with a zero-commitment session to assess your current level, learning style, and target goals.",
     },
     {
         number: "2",
-        icon: <i className="fa-solid fa-magnifying-glass"></i>,
-        title: "Find Your Tutor",
-        desc: "Browse our handpicked tutors and select the one that's the right fit for you.",
+        icon: <i className="fa-solid fa-chalkboard-user"></i>,
+        title: "Expert Faculty Match",
+        desc: "Get paired with carefully vetted, highly experienced tutors specialised in your specific curriculum.",
     },
     {
         number: "3",
-        icon: <i className="fa-solid fa-rocket"></i>,
-        title: "Start Learning",
-        desc: "Book your first session and start making real progress right away.",
+        icon: <i className="fa-solid fa-map-location-dot"></i>,
+        title: "Personalised Roadmap",
+        desc: "Follow a structured, outcome-driven learning plan tailored completely to your pace and exam targets.",
+    },
+    {
+        number: "4",
+        icon: <i className="fa-solid fa-chart-line"></i>,
+        title: "Track & Improve",
+        desc: "Engage in 1-on-1 interactive virtual classrooms, with regular progress reports keeping parents updated.",
     },
 ];
 
