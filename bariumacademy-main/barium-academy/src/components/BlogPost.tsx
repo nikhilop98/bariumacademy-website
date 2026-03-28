@@ -89,6 +89,8 @@ export default function BlogPost() {
                         src={post.coverImage}
                         alt={post.title}
                         className="blog-cover-img"
+                        loading="eager"
+                        decoding="sync"
                     />
                 </div>
             </div>
@@ -147,7 +149,7 @@ export default function BlogPost() {
                                         className="blog-related-card"
                                         onClick={() => navigate(`/blog/${rp.slug}`)}
                                     >
-                                        <img src={rp.coverImage} alt={rp.title} />
+                                        <img src={rp.coverImage} alt={rp.title} loading="eager" decoding="sync" />
                                         <div className="blog-related-body">
                                             <span className="blog-related-cat">{rp.category}</span>
                                             <h3>{rp.title}</h3>

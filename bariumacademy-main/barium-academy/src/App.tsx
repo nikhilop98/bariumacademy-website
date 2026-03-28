@@ -19,6 +19,7 @@ import WhatsNew from "./components/WhatsNew";
 import CurriculumDetails from "./components/CurriculumDetails";
 import RevisionNotes from "./components/RevisionNotes";
 import WhatsNewForm from "./components/WhatsNewForm";
+import SummerPrograms from "./components/SummerPrograms";
 
 function App() {
   return (
@@ -123,6 +124,9 @@ function App() {
 
         {/* Individual blog post page */}
         <Route path="/blog/:slug" element={<BlogPost />} />
+
+        {/* Summer Programs page */}
+        <Route path="/summer-programs" element={<SummerPrograms />} />
 
         {/* What's New page */}
         <Route path="/whats-new" element={<WhatsNew />} />

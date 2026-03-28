@@ -23,7 +23,7 @@ export default function Header() {
             <ul className="header-nav">
               <li><Link smooth to="/#home" onClick={() => setMenuOpen(false)}>Home</Link></li>
               <li><Link smooth to="/#about" onClick={() => setMenuOpen(false)}>About</Link></li>
-              <li><Link smooth to="/#courses" onClick={() => setMenuOpen(false)}>Subjects</Link></li>
+              <li><Link smooth to="/#courses" onClick={() => setMenuOpen(false)}>Programs</Link></li>
               <li><Link smooth to="/#testimonials" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
               <li><Link smooth to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
               <li><Link smooth to="/whats-new" onClick={() => setMenuOpen(false)} className="nav-whatsnew">What's New</Link></li>

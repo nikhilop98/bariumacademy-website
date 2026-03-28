@@ -73,7 +73,7 @@ export default function BlogList() {
                                     onClick={() => navigate(`/blog/${post.slug}`)}
                                 >
                                     <div className="blog-card-img-wrap">
-                                        <img src={post.coverImage} alt={post.title} loading="lazy" />
+                                        <img src={post.coverImage} alt={post.title} loading="eager" decoding="sync" />
                                         <span className="blog-card-category">{post.category}</span>
                                     </div>
                                     <div className="blog-card-body">

@@ -67,10 +67,10 @@ export default function RegistrationForm() {
               </div>
             )}
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.2rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "0.85rem" }}>
               {/* Name */}
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Your Name</label>
+                <label>Your Name <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="text"
                   name="name"
@@ -84,7 +84,7 @@ export default function RegistrationForm() {
 
               {/* Email */}
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Email Address</label>
+                <label>Email Address <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="email"
                   name="email"
@@ -98,7 +98,7 @@ export default function RegistrationForm() {
 
               {/* Subject of Interest */}
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Subject of Interest</label>
+                <label>Subject of Interest <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="text"
                   name="subject"
@@ -112,7 +112,7 @@ export default function RegistrationForm() {
 
               {/* Class */}
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Class / Grade</label>
+                <label>Class / Grade <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="text"
                   name="Class"
@@ -126,7 +126,7 @@ export default function RegistrationForm() {
 
               {/* Phone */}
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Phone Number</label>
+                <label>Phone Number <span style={{ color: "red" }}>*</span></label>
                 <PhoneInput
                   country={"in"}
                   value={formData.number}
@@ -137,17 +137,19 @@ export default function RegistrationForm() {
 
               {/* Location */}
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Your Location</label>
+                <label>Your Location <span style={{ color: "red" }}>*</span></label>
                 <input
                   type="text"
                   name="location"
                   placeholder="City or area"
                   value={formData.location}
                   onChange={handleChange}
+                  required
                   className="modern-input"
                 />
               </div>
             </div>
+
 
             {/* Submit */}
             <button
