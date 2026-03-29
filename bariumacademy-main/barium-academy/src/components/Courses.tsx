@@ -33,8 +33,8 @@ export const curricula: Curriculum[] = [
   {
     id: "us",
     flag: "🇺🇸",
-    name: "US Curriculum (K–12, SAT & AP)",
-    tagline: "Full K–12 Academic Support · SAT/ACT · AP Exam Prep",
+    name: "US Curriculum",
+    tagline: "K-12 · SAT/ACT · AP Exams",
     image: usCurric,
     color: "#1a3a6e",
     overview:
@@ -102,8 +102,8 @@ export const curricula: Curriculum[] = [
   {
     id: "uk",
     flag: "🇬🇧",
-    name: "UK Curriculum (Primary to A-Level)",
-    tagline: "Full KS1–KS5 Support · GCSE · A-Level · Exam Bootcamps",
+    name: "UK Curriculum",
+    tagline: "KS1 to KS5 · GCSE · A-Level",
     image: ukCurric,
     color: "#003087",
     overview:
@@ -174,8 +174,8 @@ export const curricula: Curriculum[] = [
   {
     id: "ireland",
     flag: "🇮🇪",
-    name: "Irish Mastery (Leaving Cert & CAO)",
-    tagline: "Maximise CAO Points & Higher Level Grades",
+    name: "Irish Curriculum",
+    tagline: "Junior & Leaving Cert · CAO Points",
     image: irishCurric,
     color: "#169b62",
     overview:
@@ -242,8 +242,8 @@ export const curricula: Curriculum[] = [
   {
     id: "india",
     flag: "🇮🇳",
-    name: "Indian Boards & Competitive (JEE / NEET)",
-    tagline: "CBSE · ICSE · JEE · NEET — 1-on-1 Expert Tutoring",
+    name: "Indian Curriculum",
+    tagline: "CBSE · ICSE · JEE · NEET",
     image: indianCurric,
     color: "#ff9933",
     overview:
@@ -312,8 +312,8 @@ export const curricula: Curriculum[] = [
   {
     id: "australia",
     flag: "🇦🇺",
-    name: "Australian Secondary (ATAR & State Boards)",
-    tagline: "95+ ATAR Targeting for VCE, HSC & QCE",
+    name: "Australian Curriculum",
+    tagline: "ATAR 95+ · VCE · HSC · QCE",
     image: australianCurric,
     color: "#006a4e",
     overview:
@@ -380,8 +380,8 @@ export const curricula: Curriculum[] = [
   {
     id: "programming",
     flag: <i className="fa-solid fa-laptop-code"></i>,
-    name: "Tech Accelerator (Coding & AI)",
-    tagline: "Python · Web Dev · AI · Data Science · App Development",
+    name: "Tech & Programming",
+    tagline: "Python · Web Dev · AI · Data Science",
     image: programmingCurric,
     color: "#2563eb",
     overview:
@@ -515,8 +515,8 @@ export const curricula: Curriculum[] = [
   {
     id: "extracurricular",
     flag: <i className="fa-solid fa-palette"></i>,
-    name: "Extra-Curricular",
-    tagline: "Debate · Music · Art · Sports Science",
+    name: "Extracurricular & Skills",
+    tagline: "Debate · MUN · Strategy · Creative Arts",
     image: extraCurric,
     color: "#dc2626",
     overview:

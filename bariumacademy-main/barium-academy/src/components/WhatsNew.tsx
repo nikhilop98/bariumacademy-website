@@ -218,27 +218,29 @@ export default function WhatsNew() {
                             14 programs · Academic, Tech, Arts & Life Skills · Ages 7–18 · June–August 2026
                         </p>
                     </div>
-                    <div style={{ display: "flex", gap: "0.75rem", flexShrink: 0, flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", gap: "0.75rem", flexShrink: 0, flexWrap: "wrap", width: "100%", maxWidth: "400px" }}>
                         <button
                             onClick={() => navigate("/summer-programs")}
                             style={{
                                 background: "white", color: "#ff6b35", border: "none",
-                                padding: "0.8rem 1.8rem", borderRadius: "10px",
+                                padding: "0.8rem 1rem", borderRadius: "10px",
                                 fontWeight: 800, fontSize: "0.95rem", cursor: "pointer", fontFamily: "inherit",
+                                flex: "1 1 auto", textAlign: "center", whiteSpace: "nowrap"
                             }}
                         >
-                            View All 14 Programs →
+                            View All Programs
                         </button>
                         <button
                             onClick={() => navigate("/whats-new-registration")}
                             style={{
                                 background: "rgba(255,255,255,0.15)", color: "white",
                                 border: "2px solid rgba(255,255,255,0.5)",
-                                padding: "0.8rem 1.8rem", borderRadius: "10px",
+                                padding: "0.8rem 1rem", borderRadius: "10px",
                                 fontWeight: 700, fontSize: "0.95rem", cursor: "pointer", fontFamily: "inherit",
+                                flex: "1 1 auto", textAlign: "center", whiteSpace: "nowrap"
                             }}
                         >
-                            Reserve a Spot
+                            Reserve Support
                         </button>
                     </div>
                 </div>

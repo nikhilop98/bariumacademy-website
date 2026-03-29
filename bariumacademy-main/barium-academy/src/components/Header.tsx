@@ -12,9 +12,10 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        {/* Logo */}
         <div className="header-logo">
-          <img src={logo} alt="Barium Academy" />
+          <Link smooth to="/#home" onClick={() => setMenuOpen(false)}>
+            <img src={logo} alt="Barium Academy" />
+          </Link>
         </div>
 
         <div className={`mobile-menu-wrapper ${menuOpen ? "open" : ""}`}>
