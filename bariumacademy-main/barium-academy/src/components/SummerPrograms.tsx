@@ -305,7 +305,19 @@ export default function SummerPrograms() {
                 <div style={{ position: "absolute", bottom: "-80px", right: "-80px", width: "350px", height: "350px", borderRadius: "50%", background: "rgba(255,255,255,0.03)" }} />
 
                 <div style={{ position: "relative", maxWidth: "800px", margin: "0 auto" }}>
-                    <span style={{ background: "rgba(255,107,53,0.2)", color: "#ff6b35", border: "1px solid rgba(255,107,53,0.4)", borderRadius: "50px", padding: "0.4rem 1.2rem", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
+                    <span style={{ 
+                        background: "rgba(255,107,53,0.2)", 
+                        color: "#ff6b35", 
+                        border: "1px solid rgba(255,107,53,0.4)", 
+                        borderRadius: "50px", 
+                        padding: "0.4rem 1rem", 
+                        fontSize: "clamp(0.7rem, 2.5vw, 0.85rem)", 
+                        fontWeight: 700, 
+                        letterSpacing: "0.5px", 
+                        textTransform: "uppercase",
+                        display: "inline-block",
+                        maxWidth: "95%"
+                    }}>
                         ☀️ Enrolling Now for Summer 2026
                     </span>
                     <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 900, marginTop: "1.5rem", marginBottom: "1rem", lineHeight: 1.2 }}>

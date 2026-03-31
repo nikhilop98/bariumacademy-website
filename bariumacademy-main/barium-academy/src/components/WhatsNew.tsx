@@ -34,7 +34,7 @@ const programs: Program[] = [
         title: "AP Bootcamp",
         ageRange: "Ages 15–18",
         tagline: "Advanced Placement Exam Prep — Comprehensive coaching for scores of 4 & 5",
-        image: "/bariumacademy/whatsnew-images/ap_bootcamp.png",
+        image: "/bariumacademy-website/whatsnew-images/ap_bootcamp.png",
         color: "#003087",
         overview:
             "Designed for high school students aiming for AP exams in Calculus AB/BC, Physics, Chemistry, Biology, Computer Science, English, and more. Our AP Bootcamp combines concept-level mastery with exam-focused strategy to target scores of 4 and 5 across all AP subjects.",
@@ -81,7 +81,7 @@ const programs: Program[] = [
         title: "GCSE Revision Program",
         ageRange: "Ages 14–16",
         tagline: "Structured revision for GCSE exams — Maths, English, Sciences & optional subjects",
-        image: "/bariumacademy/whatsnew-images/gcse_revision.png",
+        image: "/bariumacademy-website/whatsnew-images/gcse_revision.png",
         color: "#059669",
         overview:
             "Targeted at students preparing for GCSE exams in core subjects (Maths, English, Sciences) and optional subjects (History, Geography, Modern Languages). We break every subject into structured topic sessions with examiner-led marking scheme awareness — helping students move from predicted grades to Grade 9.",
@@ -128,7 +128,7 @@ const programs: Program[] = [
         title: "A-Level Revision Program",
         ageRange: "Ages 16–18",
         tagline: "Deep A-Level exam preparation — Maths, Sciences, Humanities & more",
-        image: "/bariumacademy/whatsnew-images/gcse_revision.png",
+        image: "/bariumacademy-website/whatsnew-images/gcse_revision.png",
         color: "#7c3aed",
         overview:
             "Designed for students preparing for A-Level exams in Maths, Physics, Chemistry, Biology, Computer Science, English Literature, Economics, and other subjects. We focus on deep syllabus mastery, advanced exam technique, and building the structured answer-writing ability that university admissions teams look for.",

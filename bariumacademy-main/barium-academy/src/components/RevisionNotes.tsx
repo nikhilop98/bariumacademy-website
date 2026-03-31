@@ -21,7 +21,7 @@ export default function RevisionNotes() {
   ];
 
   return (
-    <main className="revision-notes-page" style={{ padding: "130px 0 6rem", background: "var(--light-bg)", minHeight: "80vh" }}>
+    <main className="revision-notes-page" style={{ padding: "120px 0 6rem", background: "var(--light-bg)", minHeight: "80vh" }}>
       <div className="container" style={{ maxWidth: "900px" }}>
         
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
@@ -40,7 +40,7 @@ export default function RevisionNotes() {
                <p style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.6, marginBottom: "2.5rem" }}>{res.desc}</p>
                
                {/* Make sure href path targets public root /bariumacademy (if serving from subpath) or let vite handle absolute path if using standard react-router */}
-               <a href={`/bariumacademy/${res.file}`} download className="btn btn-primary custom-shadow-btn" style={{ width: "100%", padding: "1rem", fontSize: "1.1rem" }}>
+               <a href={`/bariumacademy-website/${res.file}`} download className="btn btn-primary custom-shadow-btn" style={{ width: "100%", padding: "1rem", fontSize: "1.1rem" }}>
                  <i className="fa-solid fa-file-pdf" style={{ marginRight: "10px" }}></i> Download PDF
                </a>
             </div>

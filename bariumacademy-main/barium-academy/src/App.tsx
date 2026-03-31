@@ -23,7 +23,7 @@ import SummerPrograms from "./components/SummerPrograms";
 
 function App() {
   return (
-    <Router basename="/bariumacademy/">
+    <Router basename="/bariumacademy-website/">
       <ScrollToTop />
       <Routes>
         {/* Home page */}

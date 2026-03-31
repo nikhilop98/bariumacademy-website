@@ -97,7 +97,7 @@ export default function TutorRegistration() {
     };
 
     return (
-        <section id="tutor-registration" className="tutor-page" style={{ position: "relative", zIndex: 50, padding: "3rem 1.5rem 6rem" }}>
+        <section id="tutor-registration" className="tutor-page" style={{ position: "relative", zIndex: 50, padding: "120px 1.5rem 6rem" }}>
             <div className="tutor-form-card">
                 <div className="tutor-form-header">
                     <h2>Tutor Registration</h2>

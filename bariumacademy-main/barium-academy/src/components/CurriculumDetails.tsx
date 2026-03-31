@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useParams, useNavigate, Navigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { curricula } from "./Courses";
+import SEO from "./SEO";
 
 export default function CurriculumDetails() {
   const { id } = useParams();
@@ -12,12 +13,28 @@ export default function CurriculumDetails() {
   }, []);
 
   if (!selected) {
-    return <Navigate to="/" />;
+    return (
+      <main style={{ padding: "120px 0 6rem", textAlign: "center", background: "var(--light-bg)", minHeight: "100vh" }}>
+        <div className="container">
+          <h2 className="section-title">Program Not Found</h2>
+          <p className="section-subtitle">The curriculum you are looking for does not exist or has been moved.</p>
+          <button className="btn btn-primary" onClick={() => navigate("/#courses")} style={{ marginTop: "2rem" }}>
+            Return to Programs
+          </button>
+        </div>
+      </main>
+    );
   }
 
   return (
-    <main className="curriculum-details-page" style={{ padding: "90px 0 2rem", background: "var(--light-bg)", minHeight: "100vh", overflowX: "hidden", width: "100%" }}>
-      <div className="container" style={{ maxWidth: "1100px", padding: "0 1rem" }}>
+    <>
+      <SEO 
+        title={`${selected.name} | Expert Tutoring & Curriculum Prep | Barium Academy`}
+        description={`Comprehensive ${selected.name} preparation: ${selected.tagline}. Specialized tutors for all levels and key exams.`}
+        canonical={`/curriculum/${selected.id}`}
+      />
+      <main className="curriculum-details-page" style={{ padding: "100px 0 2rem", background: "var(--light-bg)", minHeight: "100vh", overflowX: "hidden", width: "100%" }}>
+        <div className="container" style={{ maxWidth: "1100px", padding: "0 1.25rem" }}>
         
         {/* Main Content Box */}
         <div style={{ background: "white", borderRadius: "16px", overflow: "hidden", marginBottom: "1.5rem", boxShadow: "0 4px 20px rgba(0,0,0,0.05)", width: "100%" }}>
@@ -137,5 +154,6 @@ export default function CurriculumDetails() {
 
       </div>
     </main>
+    </>
   );
 }

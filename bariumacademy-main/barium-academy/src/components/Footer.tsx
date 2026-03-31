@@ -11,7 +11,7 @@ export default function Footer() {
     <footer id="contact" className="footer">
       <div className="footer-inner">
         {/* Brand Column */}
-        <div>
+        <div className="footer-brand">
           <img src={logo} alt="Barium Academy" className="footer-brand-logo" />
           <p className="footer-tagline">
             Personalised online tutoring that connects students with expert educators

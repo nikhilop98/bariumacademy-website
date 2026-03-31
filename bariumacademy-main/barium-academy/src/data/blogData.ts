@@ -29,11 +29,7 @@ export const categories = [
     { label: "Foreign Languages", slug: "languages" },
 ];
 
-import apBlogCover from "../assets/ap_blog_cover.png";
-import programmingBlogCover from "../assets/programming_blog_cover.png";
-import languagesBlogCover from "../assets/languages_blog_cover.png";
-import ibAlevelCover from "../assets/ib_alevel_blog_cover.png";
-import procrastinationCover from "../assets/procrastination_blog_cover.png";
+
 
 export const blogPosts: BlogPost[] = [
     {
@@ -52,7 +48,7 @@ export const blogPosts: BlogPost[] = [
         authorRole: "Expert Tutoring Team",
         excerpt:
             "Scoring 1500+ on the SAT is achievable with the right study plan and strategy. This guide breaks down the 3-month roadmap our expert tutors use with students.",
-        coverImage: "/bariumacademy/blog-images/sat_1500_guide_1774259368822.png",
+        coverImage: "/bariumacademy-website/blog-images/sat_1500_guide_1774259368822.png",
         content: [
             {
                 heading: "Why 1500+ Is a Realistic Goal",
@@ -101,7 +97,7 @@ export const blogPosts: BlogPost[] = [
         authorRole: "Expert Tutoring Team",
         excerpt:
             "A score of 5 on an AP Exam is the highest possible — and it's more achievable than most students think. Here's the expert strategy our tutors use.",
-        coverImage: "/bariumacademy/blog-images/ap_score_5_1774259386224.png",
+        coverImage: "/bariumacademy-website/blog-images/ap_score_5_1774259386224.png",
         content: [
             {
                 heading: "What Does Scoring a 5 Actually Mean?",
@@ -146,7 +142,7 @@ export const blogPosts: BlogPost[] = [
         authorRole: "Expert Tutoring Team",
         excerpt:
             "Python, JavaScript, Java, Scratch — with so many choices, where should a student start? This guide breaks down the best first language based on your goals.",
-        coverImage: "/bariumacademy/blog-images/programming_guide_1774259403670.png",
+        coverImage: "/bariumacademy-website/blog-images/programming_guide_1774259403670.png",
         content: [
             {
                 heading: "Why Every Student Should Learn to Code",
@@ -192,7 +188,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Senior Academic Advisor",
         excerpt: "Choosing between the International Baccalaureate (IB) and UK A-Levels is one of the biggest academic decisions a student can make. Here is our head-to-head comparison.",
-        coverImage: "/bariumacademy/blog-images/ib_vs_alevels_1774259476468.png",
+        coverImage: "/bariumacademy-website/blog-images/ib_vs_alevels_1774259476468.png",
         content: [
             {
                 heading: "The Core Philosophy",
@@ -234,7 +230,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Expert Tutoring Team",
         excerpt: "Procrastination is rarely a time-management issue—it's usually an emotional reaction to a task. Here are 5 psychological strategies to overcome it.",
-        coverImage: "/bariumacademy/blog-images/beat_procrastination_1774259435948.png",
+        coverImage: "/bariumacademy-website/blog-images/beat_procrastination_1774259435948.png",
         content: [
             {
                 heading: "Why We Procrastinate",
@@ -276,7 +272,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Expert SAT Quantitative Tutor",
         excerpt: "The SAT Math section doesn't just test math skills—it tests your ability to read carefully under pressure. Avoid these highly common score-killers.",
-        coverImage: "/bariumacademy/blog-images/sat_math_traps_1774259494706.png",
+        coverImage: "/bariumacademy-website/blog-images/sat_math_traps_1774259494706.png",
         content: [
             {
                 heading: "The Anatomy of an SAT Math Trap",
@@ -314,7 +310,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Advanced STEM Coach",
         excerpt: "Mastering AP Physics 1 is less about memorising numbers and more about connecting kinematics to energy conservation concepts. Here is our master visual review.",
-        coverImage: "/bariumacademy/blog-images/ap_physics_1_1774259512705.png",
+        coverImage: "/bariumacademy-website/blog-images/ap_physics_1_1774259512705.png",
         content: [
             {
                 heading: "Kinematics: The Big 4 Equations",
@@ -351,7 +347,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Senior Academic Advisor",
         excerpt: "Whether you are a UK student or international, navigating modern A-Levels requires understanding the split between modular vs linear testing. Here’s how they work.",
-        coverImage: "/bariumacademy/blog-images/alevels_guide_1774259530081.png",
+        coverImage: "/bariumacademy-website/blog-images/alevels_guide_1774259530081.png",
         content: [
             {
                 heading: "What are A-Levels?",
@@ -388,7 +384,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Science Specialist Tutor",
         excerpt: "To score a grade 9 in GCSE Biology, you must go beyond memorizing cell diagrams and learn to analyze practical data methodology perfectly.",
-        coverImage: "/bariumacademy/blog-images/gcse_biology_1774259549932.png",
+        coverImage: "/bariumacademy-website/blog-images/gcse_biology_1774259549932.png",
         content: [
             {
                 heading: "The Secret to 6-Marker Answers",
@@ -425,7 +421,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "English & Literacy Specialist",
         excerpt: "English Paper 1 focuses heavily on extracting narrative meaning and structure from unseen fiction. Master the layout examiners search for.",
-        coverImage: "/bariumacademy/blog-images/gcse_english_1774259578340.png",
+        coverImage: "/bariumacademy-website/blog-images/gcse_english_1774259578340.png",
         content: [
             {
                 heading: "Extract Analysis: The 3-Step Method",
@@ -462,7 +458,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Senior Admissions Consultant",
         excerpt: "Many top US schools became 'test-optional' recently. But 'optional' doesn't mean 'it won't help.' Here is when to hit submit.",
-        coverImage: "/bariumacademy/blog-images/sat_optional_1774259594114.png",
+        coverImage: "/bariumacademy-website/blog-images/sat_optional_1774259594114.png",
         content: [
             {
                 heading: "What 'Test-Optional' Actually Means",
@@ -499,7 +495,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Expert Quantitative Advisor",
         excerpt: "Implicit differentiation is a major discriminator in linear A-Level Maths papers. Here is how to keep d/dx operations clean.",
-        coverImage: "/bariumacademy/blog-images/alevel_math_1774259611567.png",
+        coverImage: "/bariumacademy-website/blog-images/alevel_math_1774259611567.png",
         content: [
             {
                 heading: "What Is Implicit Differentiation?",
@@ -536,7 +532,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Polyglot & Language Specialist",
         excerpt: "Learning a new language is less about grammar tables and more about immersive habit triggers. Here are 5 ways to speak fluently faster.",
-        coverImage: "/bariumacademy/blog-images/learn_language_1774259629526.png",
+        coverImage: "/bariumacademy-website/blog-images/learn_language_1774259629526.png",
         content: [
             {
                 heading: "Immersion over Translation",
@@ -577,7 +573,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Academic Dean",
         excerpt: "Quality beats quantity. Discover how replacing passive reading with active testing can cut your study hours in half.",
-        coverImage: "/bariumacademy/blog-images/study_effectively_1774259646859.png",
+        coverImage: "/bariumacademy-website/blog-images/study_effectively_1774259646859.png",
         content: [
             {
                 heading: "The Myth of the 8-Hour Study Session",
@@ -606,7 +602,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Student Success Coach",
         excerpt: "A good study timetable isn't about packing every hour with work; it's about strategic planning and measured recovery.",
-        coverImage: "/bariumacademy/blog-images/study_timetable_1774259665723.png",
+        coverImage: "/bariumacademy-website/blog-images/study_timetable_1774259665723.png",
         content: [
             {
                 heading: "Why Most Timetables Fail",
@@ -635,7 +631,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Cognitive Performance Expert",
         excerpt: "The ultimate weapon against digital distraction. Learn how this 25-minute timer method rewires your brain for deep work.",
-        coverImage: "/bariumacademy/blog-images/pomodoro_technique_1774259682713.png",
+        coverImage: "/bariumacademy-website/blog-images/pomodoro_technique_1774259682713.png",
         content: [
             {
                 heading: "What is the Pomodoro Technique?",
@@ -664,7 +660,7 @@ export const blogPosts: BlogPost[] = [
         author: "Barium Academy",
         authorRole: "Expert Tutoring Team",
         excerpt: "Procrastination is an emotional regulation problem, not a time management one. Here is how to hack your resistance.",
-        coverImage: "/bariumacademy/blog-images/beat_procrastination_1774259435948.png",
+        coverImage: "/bariumacademy-website/blog-images/beat_procrastination_1774259435948.png",
         content: [
             {
                 heading: "Recognise the Friction",

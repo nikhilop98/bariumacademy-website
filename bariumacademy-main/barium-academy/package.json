@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nikhilop98.github.io/bariumacademy/",
+  "homepage": "https://nikhilop98.github.io/bariumacademy-website/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

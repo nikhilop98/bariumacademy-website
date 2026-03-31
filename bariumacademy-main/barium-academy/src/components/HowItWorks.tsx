@@ -35,7 +35,7 @@ export default function HowItWorks() {
                     <span className="section-tag">Simple Process</span>
                     <h2 className="section-title">How Barium Academy Works</h2>
                     <p className="section-subtitle">
-                        Getting started takes less than 2 minutes. Three simple steps to
+                        Getting started takes less than 2 minutes. Four simple steps to
                         unlock your learning potential.
                     </p>
                 </div>
@@ -44,6 +44,7 @@ export default function HowItWorks() {
                     {steps.map((step) => (
                         <div className="step-card" key={step.number}>
                             <div className="step-number">
+                                <span className="step-count">{step.number}</span>
                                 <span className="step-icon">{step.icon}</span>
                             </div>
                             <h3>{step.title}</h3>
