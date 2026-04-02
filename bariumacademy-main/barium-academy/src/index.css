@@ -545,12 +545,14 @@ h6 {
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
     text-align: center;
   }
 
   .hero-subtitle {
     max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-actions {
@@ -562,7 +564,7 @@ h6 {
   }
 
   .hero-image-wrap img {
-    height: 320px;
+    height: 220px;
   }
 
   .hero-float-card.card-1 {
@@ -571,6 +573,37 @@ h6 {
 
   .hero-float-card.card-2 {
     right: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .hero-badge {
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 6vw, 2.4rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-image-wrap img {
+    height: 190px;
+  }
+
+  .hero-float-card {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-float-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
   }
 }
 
@@ -641,6 +674,16 @@ h6 {
 .how-it-works-header {
   text-align: center;
   margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 2.5rem 0;
+  }
+
+  .how-it-works-header {
+    margin-bottom: 2rem;
+  }
 }
 
 .how-it-works-header .section-subtitle {
@@ -744,8 +787,8 @@ h6 {
 
 @media (max-width: 700px) {
   .steps-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .steps-grid::before {
@@ -754,11 +797,32 @@ h6 {
 
   .step-card {
     text-align: center;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .step-number {
-    margin: 0 auto 1.5rem;
+    width: 70px !important;
+    height: 70px !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  .step-icon {
+    font-size: 1.6rem !important;
+  }
+
+  .step-card h3 {
+    font-size: 1rem;
+  }
+
+  .step-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -771,6 +835,25 @@ h6 {
 .subjects-header {
   text-align: center;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .subjects-section {
+    padding: 2.5rem 0;
+  }
+
+  .subjects-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .subject-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .subject-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
 }
 
 .subjects-header .section-subtitle {
@@ -831,6 +914,16 @@ h6 {
   margin-bottom: 3.5rem;
 }
 
+@media (max-width: 768px) {
+  .why-section {
+    padding: 2.5rem 0;
+  }
+
+  .why-header {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .why-header .section-subtitle {
   margin: 0 auto;
 }
@@ -886,6 +979,20 @@ h6 {
 .stats-section {
   background: var(--dark);
   padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 2rem 0;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
 }
 
 .stats-inner {
@@ -990,7 +1097,7 @@ h6 {
 
 @media (max-width: 480px) {
   .stats-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .stat-item {
@@ -998,7 +1105,8 @@ h6 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
-  .stat-item:last-child {
+  .stat-item:last-child,
+  .stat-item:nth-child(3) {
     border-bottom: none !important;
   }
 }
@@ -1013,6 +1121,20 @@ h6 {
 .testimonials-header {
   text-align: center;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 2.5rem 0 !important;
+  }
+
+  .testimonials-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonials-cta {
+    margin-top: 1.5rem;
+  }
 }
 
 .testimonials-header .section-subtitle {
@@ -1144,6 +1266,21 @@ h6 {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 2.5rem 1.25rem !important;
+  }
+
+  .cta-banner h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+
+  .cta-banner p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .cta-banner::before {
@@ -1705,13 +1842,23 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* Quick Links + Curricula pair: transparent on desktop so the 4-col grid is unaffected */
+.footer-links-pair {
+  display: contents;
+}
+
 @media (max-width: 768px) {
+  .footer {
+    padding: 2rem 2rem 0 !important;
+  }
+
   .footer-inner {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    gap: 3rem !important;
+    gap: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
   }
 
   .footer-brand {
@@ -1723,19 +1870,41 @@ h6 {
 
   .footer-brand-logo {
     display: block !important;
-    margin: 0 auto 1.5rem !important;
-    height: 70px !important;
+    margin: 0 auto 0.75rem !important;
+    height: 55px !important;
     width: auto !important;
     visibility: visible !important;
     opacity: 1 !important;
-    filter: none !important; /* Ensure visibility */
+    filter: none !important;
+  }
+
+  .footer-tagline {
+    font-size: 0.88rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .footer-social {
     display: flex !important;
     justify-content: center !important;
-    margin: 1.5rem 0 2.5rem !important;
-    gap: 1.5rem !important;
+    margin: 0.75rem 0 0 !important;
+    gap: 1rem !important;
+  }
+
+  /* Quick Links + Curricula: 2-col side-by-side row */
+  .footer-links-pair {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .footer-links-pair .footer-col {
+    text-align: left !important;
+  }
+
+  .footer-links-pair .footer-col ul {
+    align-items: flex-start !important;
   }
 
   .footer-col {
@@ -1744,7 +1913,7 @@ h6 {
   }
 
   .footer-col h4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .footer-col ul {
@@ -1758,14 +1927,14 @@ h6 {
 
   .footer-contact-item {
     justify-content: center !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .footer-bottom {
     flex-direction: column !important;
-    gap: 0.75rem !important;
+    gap: 0.5rem !important;
     text-align: center !important;
-    padding: 2rem 1.5rem !important;
+    padding: 1rem 1.5rem !important;
   }
 }
 
@@ -2904,12 +3073,9 @@ h6 {
 @media (max-width: 768px) {
 
   .why-section,
-  .testimonials-section,
   .blog-section,
   .registration-section,
-  .whatsnew-section,
-  .stats-section,
-  .cta-banner {
+  .whatsnew-section {
     padding: 2.5rem 1.25rem !important;
   }
 
@@ -2919,7 +3085,22 @@ h6 {
   }
 
   .why-icon {
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
+  }
+
+  /* Reduce section header spacing on mobile */
+  .section-tag {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
 

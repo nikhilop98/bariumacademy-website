@@ -55,31 +55,32 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><Link smooth to="/#home">Home</Link></li>
-            <li><Link smooth to="/#about">About Us</Link></li>
-            <li><Link smooth to="/#courses">Curricula</Link></li>
-            <li><Link smooth to="/#testimonials">Reviews</Link></li>
-            <li><Link smooth to="/blog">Blog</Link></li>
-            <li><Link smooth to="/registration">Book a Demo</Link></li>
-            <li><Link smooth to="/revision-notes" style={{ color: "var(--primary)", fontWeight: "bold" }}>Free Revision Notes</Link></li>
-          </ul>
-        </div>
+        {/* Quick Links + Curricula — side-by-side on mobile */}
+        <div className="footer-links-pair">
+          <div className="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><Link smooth to="/#home">Home</Link></li>
+              <li><Link smooth to="/#about">About Us</Link></li>
+              <li><Link smooth to="/#courses">Curricula</Link></li>
+              <li><Link smooth to="/#testimonials">Reviews</Link></li>
+              <li><Link smooth to="/blog">Blog</Link></li>
+              <li><Link smooth to="/registration">Book a Demo</Link></li>
+              <li><Link smooth to="/revision-notes" style={{ color: "var(--primary)", fontWeight: "bold" }}>Free Revision Notes</Link></li>
+            </ul>
+          </div>
 
-        {/* Curricula */}
-        <div className="footer-col">
-          <h4>Curricula</h4>
-          <ul>
-            <li><Link smooth to="/#courses">US Curriculum</Link></li>
-            <li><Link smooth to="/#courses">UK Curriculum</Link></li>
-            <li><Link smooth to="/#courses">Irish Curriculum</Link></li>
-            <li><Link smooth to="/#courses">Indian Curriculum</Link></li>
-            <li><Link smooth to="/#courses">Programming</Link></li>
-            <li><Link smooth to="/#courses">Foreign Languages</Link></li>
-          </ul>
+          <div className="footer-col">
+            <h4>Curricula</h4>
+            <ul>
+              <li><Link smooth to="/#courses">US Curriculum</Link></li>
+              <li><Link smooth to="/#courses">UK Curriculum</Link></li>
+              <li><Link smooth to="/#courses">Irish Curriculum</Link></li>
+              <li><Link smooth to="/#courses">Indian Curriculum</Link></li>
+              <li><Link smooth to="/#courses">Programming</Link></li>
+              <li><Link smooth to="/#courses">Foreign Languages</Link></li>
+            </ul>
+          </div>
         </div>
 
         {/* Contact */}
@@ -117,7 +118,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <span>© 2022 Barium Academy. All rights reserved.</span>
+        <span>© 2025 Barium Academy. All rights reserved.</span>
         <span>Made with ❤️ for students everywhere.</span>
       </div>
     </footer>
