@@ -7,57 +7,57 @@ const testimonials = [
     id: 1,
     name: "Aiden Williams",
     role: "SAT Prep Student",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&auto=format&q=90",
+    country: "USA",
     quote: "Barium Academy helped me increase my SAT score by 210 points in just two months! The strategies they taught for the Reading section were a game-changer.",
   },
   {
     id: 2,
     name: "Sophia Rodriguez",
     role: "AP Biology Student",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&auto=format&q=90",
+    country: "UAE",
     quote: "AP Biology felt impossible until I started tutoring with Barium Academy. I ended up scoring a 5 on the exam, and I actually enjoyed learning the material!",
   },
   {
     id: 3,
     name: "Oliver Brown",
     role: "GCSE Maths Student",
-    avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=120&h=120&fit=crop&auto=format&q=90",
+    country: "United Kingdom",
     quote: "I was predicted a Grade 5 in GCSE Maths, but with my Barium Academy tutor's help, I managed to get a Grade 8! The past paper practice we did was invaluable.",
   },
   {
     id: 4,
     name: "Isabella Evans",
     role: "A-Level Chemistry Student",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&auto=format&q=90",
+    country: "Hong Kong",
     quote: "A-Level Chemistry is notoriously difficult, but my tutor made organic chemistry click for me. Thanks to them, I secured the A grade I needed for Medical School.",
   },
   {
     id: 5,
-    name: "Lucas Garcia",
-    role: "Spanish Language Student",
-    avatar: "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=120&h=120&fit=crop&auto=format&q=90",
-    quote: "I needed to reach B2-level Spanish for my gap year. My native-speaking tutor made the conversational practice fun and corrected my grammar without making me feel discouraged.",
+    name: "James Wilson",
+    role: "AP Physics Student",
+    country: "USA",
+    quote: "The personalized attention at Barium Academy is unmatched. My physics tutor broke down complex mechanics into simple, relatable concepts. Highly recommended!",
   },
   {
     id: 6,
-    name: "David Chen",
-    role: "Python Programming Student",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&auto=format&q=90",
-    quote: "I started taking Python classes from scratch here. The hands-on projects we built together gave me the confidence to start writing my own automation scripts!",
-  },
-  {
-    id: 7,
-    name: "Priya Menon",
-    role: "CBSE Class 12 Student",
-    avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=120&h=120&fit=crop&auto=format&q=90",
-    quote: "My tutor helped me bridge the gap between CBSE board prep and JEE concepts. My Physics scores improved dramatically within just 6 weeks!",
+    name: "Emma Thompson",
+    role: "IGCSE Science Student",
+    country: "United Kingdom",
+    quote: "I was struggling with the volume of content in IGCSE, but my tutor helped me organize my revision and focus on the most important topics. My grades shot up!",
   },
   {
     id: 8,
     name: "Cian O'Brien",
     role: "Irish Leaving Cert Student",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&auto=format&q=90",
+    country: "Ireland",
     quote: "The Leaving Cert marking scheme breakdowns were incredibly helpful. My tutor knew exactly what the examiners wanted and I hit my CAO points target!",
+  },
+  {
+    id: 9,
+    name: "Liam O'Connor",
+    role: "SAT Prep Student",
+    country: "Australia",
+    quote: "Excellent tutoring! The flexible scheduling worked perfectly for my timezone, and the SAT prep materials provided were top-notch. I felt so prepared on exam day.",
   },
 ];
 
@@ -99,14 +99,9 @@ export default function Testimonials() {
                 <p className="testimonial-quote">{t.quote}</p>
 
                 <div className="testimonial-author">
-                  <img
-                    className="testimonial-avatar"
-                    src={t.avatar}
-                    alt={t.name}
-                  />
-                  <div>
+                  <div className="testimonial-author-info">
                     <div className="testimonial-name">{t.name}</div>
-                    <div className="testimonial-role">{t.role}</div>
+                    <div className="testimonial-role">{t.role} — <span className="testimonial-country">{t.country}</span></div>
                   </div>
                 </div>
               </div>
